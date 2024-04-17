@@ -1,0 +1,35 @@
+{
+  "timeZone": "America/New_York",
+  "dependencies": {},
+  "exceptionLogging": "STACKDRIVER",
+  "oauthScopes": [
+    "https://www.googleapis.com/auth/script.locale",
+    "https://www.googleapis.com/auth/documents.currentonly",
+    "https://www.googleapis.com/auth/documents",
+    "https://www.googleapis.com/auth/drive.file",
+    "https://www.googleapis.com/auth/script.container.ui"
+  ],
+  "runtimeVersion": "V8",
+  "addOns": {
+    "common": {
+      "name": "Paperless Debate",
+      "logoUrl": "https://howdoi.riverdale.edu/w/images/c/cc/PaperlessDebateLogo.png",
+      "useLocaleFromApp": true,
+      "homepageTrigger": {
+        "runFunction": "onHomepage",
+        "enabled": true
+      },
+      "universalActions": [
+        {
+          "label": "Upload",
+          "openLink": "https://opencaselist.com/hspf23"
+        }
+      ]
+    },
+    "docs": {
+      "onFileScopeGrantedTrigger": {
+        "runFunction": "docsFunction"
+      }
+    }
+  }
+}
