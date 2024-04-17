@@ -1,0 +1,3 @@
+function docsFunction() {
+  return createDebateCard();
+}
